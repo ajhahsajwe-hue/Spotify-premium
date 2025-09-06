@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Premium Account</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #1e1e1e 0%, #121212 100%);
+            color: #ffffff;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .logo {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: #fff;
+        }
+        
+        .logo span {
+            color: #1DB954;
+        }
+        
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            background: linear-gradient(to right, #fff, #1DB954);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .subheadline {
+            font-size: 1.3rem;
+            color: #b3b3b3;
+            margin-bottom: 40px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .plan-section {
+            display: flex;
+            justify-content: center;
+            margin: 50px 0;
+        }
+        
+        .plan-card {
+            background: #212121;
+            border-radius: 15px;
+            padding: 40px 30px;
+            width: 100%;
+            max-width: 500px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+            transition: transform 0.3s ease;
+            border-top: 5px solid #1DB954;
+        }
+        
+        .plan-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .plan-icon {
+            font-size: 50px;
+            margin-bottom: 20px;
+            color: #1DB954;
+        }
+        
+        .plan-title {
+            font-size: 28px;
+            margin-bottom: 15px;
+        }
+        
+        .plan-features {
+            list-style-type: none;
+            margin: 25px 0;
+            text-align: left;
+        }
+        
+        .plan-features li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+        }
+        
+        .plan-features li:before {
+            content: "✓";
+            color: #1DB954;
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+        
+        .cta-button {
+            display: block;
+            width: 100%;
+            padding: 16px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s ease;
+            margin-top: 20px;
+            background: #1DB954;
+            color: white;
+        }
+        
+        .cta-button:hover {
+            background: #1ed760;
+            box-shadow: 0 5px 15px rgba(29, 185, 84, 0.4);
+        }
+        
+        .testimonials {
+            margin: 80px 0;
+            text-align: center;
+        }
+        
+        .testimonials h2 {
+            font-size: 32px;
+            margin-bottom: 50px;
+            color: #fff;
+        }
+        
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background: #212121;
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            color: #b3b3b3;
+            line-height: 1.6;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #1DB954;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .author-name {
+            font-weight: 600;
+        }
+        
+        .author-title {
+            color: #1DB954;
+            font-size: 14px;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #b3b3b3;
+            font-size: 14px;
+            border-top: 1px solid #3d3d3d;
+            margin-top: 50px;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.2rem;
+            }
+            
+            .subheadline {
+                font-size: 1.1rem;
+            }
+            
+            .plan-card {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">Spotify<span>®</span></div>
+            <h1>Get Your Premium Spotify Account Now!</h1>
+            <p class="subheadline">Upgrade to premium and enjoy ad-free music with exclusive features.</p>
+        </header>
+        
+        <div class="plan-section">
+            <div class="plan-card premium">
+                <div class="plan-icon">🎶</div>
+                <h2 class="plan-title">Premium Account</h2>
+                <ul class="plan-features">
+                    <li>Ad-free music listening</li>
+                    <li>Download songs for offline playback</li>
+                    <li>Unlimited skips and high-quality audio</li>
+                    <li>Access to exclusive content and podcasts</li>
+                    <li>Group sessions for listening with friends</li>
+                    <li>On-demand playback of any track</li>
+                    <li>Enhanced sound quality (up to 320 kbps)</li>
+                </ul>
+                <a href="https://playabledownload.com/1840849" class="cta-button">Get Premium Account</a>
+            </div>
+        </div>
+        
+        <div class="testimonials">
+            <h2>What Our Users Say</h2>
+            <div class="testimonial-grid">
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"Upgraded to Premium last week and it's been a game-changer. No ads and offline listening is worth every penny!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">M</div>
+                        <div>
+                            <div class="author-name">Michael Chen</div>
+                            <div class="author-title">Premium User</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"The accounts were delivered instantly after completing the tasks. Premium works perfectly with all features unlocked!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">A</div>
+                        <div>
+                            <div class="author-name">Alex Rodriguez</div>
+                            <div class="author-title">Verified User</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <p class="testimonial-text">"I've tried both free and premium, and premium is definitely worth it. The sound quality difference alone is noticeable!"</p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">J</div>
+                        <div>
+                            <div class="author-name">Jessica Williams</div>
+                            <div class="author-title">Music Enthusiast</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p>Limited time offer. Accounts are updated daily.</p>
+        </footer>
+    </div>
+</body>
+</html>
